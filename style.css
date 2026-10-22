@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    padding: 30px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px #0002;
+}
+
+h1 {
+    text-align: center;
+    color: #4169c1;
+}
+
+.container > p {
+    text-align: center;
+    color: #777;
+}
+
+.progress {
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.progress-bar {
+    height: 8px;
+    margin: 10px 0 25px;
+    overflow: hidden;
+    background: #eee;
+    border-radius: 10px;
+}
+
+#progressFill {
+    width: 20%;
+    height: 100%;
+    background: #5485ed;
+    transition: width 0.3s;
+}
+
+#question {
+    font-size: 21px;
+    color: #333;
+}
+
+.answers {
+    display: grid;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.answer {
+    padding: 14px;
+    border: 2px solid #e1e6f0;
+    border-radius: 12px;
+    background: white;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+.answer:hover:not(:disabled) {
+    border-color: #5485ed;
+    background: #f4f7ff;
+}
+
+.answer.correct {
+    background: #d9f8e2;
+    border-color: #39a95c;
+}
+
+.answer.wrong {
+    background: #ffe0e0;
+    border-color: #e45b5b;
+}
+
+.answer:disabled {
+    cursor: default;
+}
+
+#feedback {
+    min-height: 24px;
+    font-weight: bold;
+}
+
+#next,
+#restart {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #5485ed;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#result {
+    text-align: center;
+}
+
+#result h2 {
+    color: #4169c1;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+}
